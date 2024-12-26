@@ -1,0 +1,16 @@
+The solution involves using the `text-overflow` property (in conjunction with `overflow: hidden;` and `white-space: nowrap;`) to handle the overflow gracefully:
+
+```css
+.container {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container::before {
+  content: "This is a very long string that may overflow its container.";
+  text-overflow: ellipsis;
+}
+```
+
+Alternatively, you can shorten the content of the pseudo-element or break it into multiple lines using line breaks within the content string.
