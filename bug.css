@@ -1,0 +1,7 @@
+The following CSS code uses a pseudo-element (:before) with content that is too long, causing it to overflow its container and potentially disrupt the layout:
+
+```css
+.container::before {
+  content: "This is a very long string that may overflow its container.";
+}
+```
